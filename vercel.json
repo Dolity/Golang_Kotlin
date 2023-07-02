@@ -1,0 +1,37 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "main.go",
+        "use": "@vercel/go"
+      }
+    ],
+    "routes": [
+        {
+          "src": "/users",
+          "methods": ["GET"],
+          "dest": "main"
+        },
+        {
+          "src": "/users",
+          "methods": ["POST"],
+          "dest": "main"
+        },
+        {
+          "src": "/users/:id",
+          "methods": ["PUT"],
+          "dest": "main"
+        },
+        {
+          "src": "/users/:id",
+          "methods": ["DELETE"],
+          "dest": "main"
+        },
+        {
+          "src": "/login",
+          "methods": ["POST"],
+          "dest": "main"
+        }
+      ]
+  }
+  
